@@ -1,5 +1,5 @@
-module.exports = app =>{
-    app.get('/', (req, res) => {
-        res.send({hi: 'Nice to meet you!'})
-    });
+module.exports = app => {
+  app.get("/", (req, res) => {
+    res.send({ hi: "Nice to meet you!" });
+  });
 };
