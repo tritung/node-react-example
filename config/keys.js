@@ -5,5 +5,6 @@ module.exports = {
   facebookAppID: "220632698486641",
   facebookAppSecrect: "47a912fb5929ba645731218fe9f401bd",
   mongoURI:
-    "mongodb://tungtruong:tung1991@ds157528.mlab.com:57528/node-react-example"
+    "mongodb://tungtruong:tung1991@ds157528.mlab.com:57528/node-react-example",
+  cookieKey: 'kjhgisdo9898dvnknskdv'
 };
