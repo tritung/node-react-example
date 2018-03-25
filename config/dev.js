@@ -9,5 +9,7 @@ module.exports = {
     "mongodb://tungtruong:tung1991@ds157528.mlab.com:57528/node-react-example",
   cookieKey: "kjhgisdo9898dvnknskdv",
   stripePublishableKey: "pk_test_VYqmNHPoetAK7U0whIJO7M78",
-  stripeSecrectKey: "sk_test_6hVUrnCHEFnIiOy4hrqnhT3R"
+  stripeSecrectKey: "sk_test_6hVUrnCHEFnIiOy4hrqnhT3R",
+  sendGridKey:
+    "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"
 };

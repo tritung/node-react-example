@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const requireLogin = require("../middlewares/requireLogin");
 const requireCredits = require("../middlewares/requireCredits");
+const surveyTemplate = require("../services/emailTemplate/surveyTemplate");
+const Mailer = require("../services/Mailer");
 const Survey = mongoose.model("surveys");
 
 module.exports = app => {
@@ -11,8 +13,13 @@ module.exports = app => {
       body,
       subject,
       recipients: recipients.split(",").map(email => ({ email: email.trim() })),
-      _user: req.user.id,
-      dateSent: Date.now()
+      dateSent: Date.now(),
+      _user: req.user.id
     });
+
+    //Greate place to send an email
+    const mailer = new Mailer(survey, surveyTemplate(survey));
+    mailer.send();
+    res.send(survey);
   });
 };
